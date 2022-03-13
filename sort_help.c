@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_help.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruslanageev <ruslanageev@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fcassand <fcassand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:02:15 by fcassand          #+#    #+#             */
-/*   Updated: 2022/03/10 14:24:56 by ruslanageev      ###   ########.fr       */
+/*   Updated: 2022/03/12 04:47:04 by fcassand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	make_descision(t_all *all)
 	all->to_push = tmp_b->order;
 	while (size--)
 	{
-		if (tmp_b->score <= all->min_score)
+		if (tmp_b->score < all->min_score)
 		{
 			all->min_score = tmp_b->score;
 			all->to_push = tmp_b->order;
@@ -83,6 +83,8 @@ void	get_score(t_all *all, int size)
 
 	i = 0;
 	tmp_b = all->stack_b;
+	all->rev_b = 0;
+	all->rev_a = 0;
 	while (size)
 	{
 		j = compare(all, tmp_b->order, all->size_a);

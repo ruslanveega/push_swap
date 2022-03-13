@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruslanageev <ruslanageev@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fcassand <fcassand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 14:33:56 by fcassand          #+#    #+#             */
-/*   Updated: 2022/03/08 01:46:58 by ruslanageev      ###   ########.fr       */
+/*   Updated: 2022/03/12 02:18:08 by fcassand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	create_struct(t_all *all, int size)
 	all->to_push = 0;
 	all->min_score = 0;
 	all->order_a = 0;
+	all->index = 0;
 }
 
 t_all	*init(int *arr, int size)

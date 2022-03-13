@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruslanageev <ruslanageev@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fcassand <fcassand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 14:25:48 by fcassand          #+#    #+#             */
-/*   Updated: 2022/03/10 14:28:28 by ruslanageev      ###   ########.fr       */
+/*   Updated: 2022/03/13 03:08:40 by fcassand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef	struct	s_all
 	int				to_push;
 	int				min_score;
 	int				order_a;
+	int				index;
 }					t_all;
 
 int		main(int argc, char **argv);
@@ -85,8 +86,6 @@ void	sort_3(t_all *all);
 void	sorting(t_all *all);
 void	sort_5(t_all *all);
 void	full_sort(t_all *all);
-void	search_maxseq(t_all *all, int size);
-void	search_index(t_all *all, int size);
 void	get_score(t_all *all, int size);
 int		commpare(t_all *all, int order, int size);
 void	max(t_all *all, t_node *node, int stack_size);
@@ -98,4 +97,5 @@ void	put_a(t_all *all);
 void	rot_a_b(t_all *all);
 void	rot_a(t_all *all);
 void	rot_b(t_all *all);
+// void	to_stack_b(t_all *all);
 #endif
